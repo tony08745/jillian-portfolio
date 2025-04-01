@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/api/message', (req, res) => {
-    res.json({ message: 'Tony lovesss jilly!' });
+    res.json({ message: 'Tony lovesss me!' });
 });
 
 const PORT = 5000;
