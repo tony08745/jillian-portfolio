@@ -1,19 +1,11 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import VideoGallery from './VideoGallery';
 
 function App() {
-    const [msg, setMsg] = useState('');
-
-    useEffect(() => {
-        axios.get('http://localhost:5000/api/message')
-            .then(res => setMsg(res.data.message))
-            .catch(err => console.error(err));
-    }, []);
-
     return (
-        <div>
-            <h1>React + Node</h1>
-            <p>{msg}</p>
+        <div className="min-h-screen bg-gray-100">
+            <h1 className="text-3xl font-bold text-center my-6">My Portfolio</h1>
+            <VideoGallery />
         </div>
     );
 }
